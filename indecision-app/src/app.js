@@ -69,17 +69,6 @@ const Header = (props) => {
   );
 };
 
-// class Header extends React.Component {
-//   render() {
-//     return (
-//       <div>
-//         <h1>{this.props.title}</h1>
-//         <h2>{this.props.subtitle}</h2>
-//       </div>
-//     );
-//   }
-// }
-
 const Action = (props) => {
   return (
     <div>
@@ -92,21 +81,6 @@ const Action = (props) => {
     </div>
   );
 };
-
-// class Action extends React.Component {
-//   render() {
-//     return (
-//       <div>
-//         <button 
-//           onClick={this.props.handlePick}
-//           disabled={!this.props.hasOptions}
-//         >
-//           What should I do?
-//         </button>
-//       </div>
-//     );
-//   }
-// }
 
 const Options = (props) => {
   return (
@@ -123,23 +97,6 @@ const Options = (props) => {
   );
 };
 
-// class Options extends React.Component {  
-//   render() {
-//     return (
-//       <div>
-//         <button 
-//           onClick={this.props.handleDeleteOptions}
-//         >
-//           Remove All
-//         </button>
-//         {
-//           this.props.options.map((option) => <Option key={option} optionText={option}/>)
-//         }
-//       </div>      
-//     );
-//   }
-// }
-
 const Option = (props) => {
   return (
     <div>
@@ -147,16 +104,6 @@ const Option = (props) => {
     </div>
   );
 };
-
-// class Option extends React.Component {
-//   render() {
-//     return (
-//       <div>
-//         Option: {this.props.optionText}
-//       </div>
-//     );
-//   }
-// }
 
 class AddOption extends React.Component {
   constructor(props) {
@@ -189,13 +136,5 @@ class AddOption extends React.Component {
   }
 }
 
-// const User = (props) => {
-//   return (
-//     <div>
-//       <p>Name: {props.name}</p>
-//       <p>Age: {props.age}</p>
-//     </div>
-//   );
-// };
 
 ReactDOM.render(<IndecisionApp />, document.getElementById('app'));
