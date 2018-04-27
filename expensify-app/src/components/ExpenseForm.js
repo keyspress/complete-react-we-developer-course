@@ -41,7 +41,6 @@ export default class ExpenseForm extends React.Component {
   };
   onSubmit = (e) => {
     e.preventDefault();
-
     if(!this.state.description || !this.state.amount) {
       this.setState(() => ({ error: 'Please provide description and amount' })); 
     } else {
@@ -51,7 +50,7 @@ export default class ExpenseForm extends React.Component {
   render() {
     return (
       <div>
-        {this.state.error !== '' ? <p>{this.state.error}</p> : null }
+        {this.state.error && <p>{this.state.error}</p>}
         <form onSubmit={this.onSubmit}>
           <input 
             type='text'
